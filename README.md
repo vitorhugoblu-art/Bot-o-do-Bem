@@ -1,20 +1,15 @@
-# ESTOU BEM — protótipo publicável
+# ESTOU BEM — protótipo com autenticação Supabase
 
-## Publicar
-Faça upload da pasta no GitHub e importe o repositório na Vercel como projeto estático (Framework Preset: Other). Também pode hospedar o index.html em qualquer hospedagem estática.
+## Publicação
+1. Crie um projeto no Supabase.
+2. Em Project Settings / API, copie a Project URL e a chave pública anon (ou publishable key compatível). Nunca use service_role ou secret key no navegador.
+3. Edite `config.js` com os valores públicos do seu projeto.
+4. Em Authentication / URL Configuration, defina Site URL com a URL final da Vercel e adicione a URL de redirecionamento autorizada.
+5. Habilite Email/Password em Authentication / Providers e configure entrega de e-mails SMTP para produção.
+6. Envie `index.html` e `config.js` para a raiz do repositório GitHub e importe na Vercel com Framework Other.
 
-## O que funciona
-- Layout responsivo acessível com botão grande.
-- Registro de até três períodos por dia no armazenamento local do navegador.
-- Nome e telefone salvos no dispositivo.
-- Abertura do WhatsApp com mensagem preenchida, exigindo que o usuário confirme o envio.
+## Funcionalidade
+Login real, cadastro por e-mail, confirmação de e-mail (conforme configuração do Supabase), link para redefinir senha e logout.
 
-## Limitações importantes
-- Não envia mensagens automaticamente.
-- Não avisa familiares em caso de ausência de confirmação.
-- Não possui autenticação, banco de dados remoto nem sincronização entre dispositivos.
-- O registro pode ser perdido se os dados do navegador forem apagados.
-- Não deve ser utilizado como serviço de emergência ou monitoramento de saúde.
-
-## Próxima versão para produção
-Backend com autenticação, consentimento e LGPD, banco de dados, agendamento de lembretes e alertas, provedor de mensagens (WhatsApp Business API ou SMS), logs de entrega, configuração de horários e fuso horário, testes e monitoramento.
+## Limitações críticas
+Os registros do botão ainda são armazenados somente no navegador (localStorage), **não estão vinculados ao usuário no servidor**. O envio pelo WhatsApp é manual e não existem alertas de ausência nem monitoramento remoto. Não usar como sistema de emergência ou acompanhamento de saúde. Para produção, implementar banco com RLS, consentimento LGPD, vínculo seguro entre familiar e idoso, notificações e auditoria.
