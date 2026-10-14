@@ -1,0 +1,11 @@
+ESTOU BEM 3.0 - ATUALIZAÇÃO
+
+1. Supabase: abra SQL Editor, execute ATUALIZAR_BANCO.sql. NÃO execute DROP TABLE.
+2. GitHub: substitua index.html e config.js pelos desta pasta no repositório ligado à Vercel; faça Commit.
+3. Abra o site e atualize com Ctrl+F5. A conta antiga marcada como familiar agora acessa a configuração do próprio usuário.
+4. Cadastre nome do idoso, nome e telefone do familiar, e horários.
+5. Toque ESTOU BEM: salva no Supabase. Depois toque Enviar confirmação pelo WhatsApp e confirme o envio no WhatsApp.
+
+IMPORTANTE: Não há envio automático de WhatsApp. Para isso, será necessário backend e provedor de mensagens.
+O site não consegue garantir alarme contínuo com tela bloqueada ou navegador fechado. Para alarmes confiáveis, será necessário app nativo.
+Não é um serviço de emergência.
