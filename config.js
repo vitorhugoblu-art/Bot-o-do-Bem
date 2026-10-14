@@ -1,4 +1,4 @@
 window.ESTOU_BEM_CONFIG = {
-  supabaseUrl: "COLE_URL_DO_PROJETO",
-  supabaseAnonKey: "COLE_CHAVE_PUBLICA_ANON"
+  supabaseUrl: "https://qeyrxhrvroidoixflvlj.supabase.co",
+  supabaseAnonKey: "sb_publishable_OEvxLKhE9f6qiQaM_KW8aA_XXMHQRqO"
 };
